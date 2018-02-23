@@ -59,6 +59,7 @@ print.savepointr <- function(sptr) {
 }
 
 #' @describeIn savepointr Return the current savepoint, if any
+#' @export
 current_savepoint <- function(sptr) {
   if (!file.exists(sptr[['current_path']])) {
     NULL
@@ -68,12 +69,14 @@ current_savepoint <- function(sptr) {
 }
 
 #' @describeIn savepointr Whether a current savepoint exists, TRUE/FALSE
+#' @export
 has_current_savepoint <- function(sptr) {
   file.exists(sptr[['current_path']])
 }
 
 #' @describeIn savepointr Clear the current savepoint, if any, and any failed
 #' saves
+#' @export
 clear_savepointr <- function(sptr) {
   if (file.exists(sptr[['current_path']])) {
     file.remove(sptr[['current_path']])
@@ -86,6 +89,7 @@ clear_savepointr <- function(sptr) {
 }
 
 #' @describeIn savepointr Create a new savepoint
+#' @export
 save_current <- function(sptr, savepoint) {
   # Save to new path, then rename, because save is not atomic but rename is.
   # Thus, if the program crashes during the save / the save fails, the current
