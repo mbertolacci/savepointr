@@ -79,19 +79,19 @@ savepointr <- function(
 print.savepointr <- function(x, ...) {
   cat(
     'Savepointr at',
-    sptr[['current_path']],
+    x[['current_path']],
     'with',
     ifelse(
-      file.exists(sptr[['current_path']]),
+      file.exists(x[['current_path']]),
       sprintf(
         'a current savepoint of size %d',
-        file.size(sptr[['current_path']])
+        file.size(x[['current_path']])
       ),
       'no current savepoint'
     ),
     '\n'
   )
-  invisible(sptr)
+  invisible(x)
 }
 
 #' @describeIn savepointr Return the current savepoint, if any.
