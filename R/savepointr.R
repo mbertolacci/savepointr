@@ -69,7 +69,7 @@ savepointr <- function(
     new_path = file.path(new_directory, basename(new_path))
   )
   class(sptr) <- 'savepointr'
-  return(sptr)
+  sptr
 }
 
 #' Print a savepointr object.
