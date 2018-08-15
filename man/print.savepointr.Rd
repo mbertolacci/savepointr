@@ -2,10 +2,15 @@
 % Please edit documentation in R/savepointr.R
 \name{print.savepointr}
 \alias{print.savepointr}
-\title{Print a savepointr object}
+\title{Print a savepointr object.}
 \usage{
-\method{print}{savepointr}(sptr)
+\method{print}{savepointr}(x, ...)
+}
+\arguments{
+\item{x}{A \code{\link{savepointr}}.}
+
+\item{...}{Not used.}
 }
 \description{
-Print a savepointr object
+Print a savepointr object.
 }
