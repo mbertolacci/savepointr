@@ -11,6 +11,7 @@ r:
 
 r_packages:
   - covr
+  - lintr
 
 after_success:
   - Rscript -e 'library(covr); codecov()'
